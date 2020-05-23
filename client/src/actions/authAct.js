@@ -39,6 +39,23 @@ export const loginUser = userData => dispatch => {
     );
 };
 
+// SOCIAL USER
+export const socialRegisterUser = (userData, history) => dispatch => {
+  axios
+    .post("/auth/user/registersocial", userData)
+    .then(res => {
+      const { token } = res.data;
+      // Set token to ls
+      sessionStorage.setItem("jwtToken", token);
+      // Set token to Auth header
+      setAuthToken(token);
+      // Decode token to get user data
+      const decoded = jwt_decode(token);
+      // Set current user
+      dispatch(setCurrentUser(decoded));
+    })
+    .catch(err => console.log(err));
+};
 
 // Set logged in user
 export const setCurrentUser = (decoded, dispatch) => {
