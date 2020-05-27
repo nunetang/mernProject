@@ -9,9 +9,6 @@ import {
   GET_ERRORS
 } from "./Categories";
 
-//-------------------------------------------------------------
-// GET PROFILE FAVORITES
-
 export const getCurrentProfile = () => dispatch => {
   dispatch(setProfileLoading());
   axios.get("/auth/profileget").then(res => {
