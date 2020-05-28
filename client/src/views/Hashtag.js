@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { fetchItinerariesHashtag } from "../actions/journeyAct";
+import { fetchItinerariesHashtag } from "../actions/itinerariesActions";
 import { getCurrentProfile } from "./../actions/profileActions";
 
 import Header from "./../components/layout/Header";
-import ItinCard from "./../components/layout/JourneyCard";
+import ItinCard from "./../components/layout/ItinCard";
 
 class Hashtag extends Component {
   constructor(props) {

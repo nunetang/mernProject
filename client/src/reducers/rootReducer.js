@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import cityReducer from "./cityReducer";
-import itinReducer from "./journeyReducer";
+import itinReducer from "./itinReducer";
 import activityReducer from "./activityReducer";
 import commentReducer from "./commentReducer";
 import authReducer from "./authReducer";

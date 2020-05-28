@@ -1,4 +1,4 @@
-import { SET_CURRENT_USER } from "../actions/Categories";
+import { SET_CURRENT_USER } from "../actions/Types";
 import isEmpty from "../actions/utils/isEmpty";
 
 const initialState = {
@@ -17,4 +17,4 @@ export default function(state = initialState, action) {
     default:
       return state;
   }
-};
+}

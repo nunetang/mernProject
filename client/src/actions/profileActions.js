@@ -7,7 +7,10 @@ import {
   CLEAR_CURRENT_PROFILE,
   GET_PROFILE,
   GET_ERRORS
-} from "./Categories";
+} from "./Types";
+
+//-------------------------------------------------------------
+// GET PROFILE FAVORITES
 
 export const getCurrentProfile = () => dispatch => {
   dispatch(setProfileLoading());
@@ -33,7 +36,7 @@ export const clearCurrentProfile = () => {
   };
 };
 
-
+//-------------------------------------------------------------
 
 // FETCH FAVORITES BY USER ID
 export const fetchItinerariesID = favid => dispatch => {

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { debounce } from "lodash";
-import { fetchCities } from "../actions/citiesAct";
-import { editCity, deleteCity } from "../actions/apricotAct";
+import { fetchCities } from "../actions/citiesActions";
+import { editCity, deleteCity } from "../actions/cmsActions";
 
 import Header from "../components/layout/Header";
 import Button from "@material-ui/core/Button";

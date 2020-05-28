@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import Icon from "@material-ui/core/Icon";
 
+// import PropTypes from "prop-types";
+
 class BackButton extends Component {
   render() {
     return (
@@ -17,5 +19,13 @@ class BackButton extends Component {
     );
   }
 }
+
+// BackButton.defaultProps = {
+//   standAlone: true
+// };
+
+// BackButton.propTypes = {
+//   standAlone: PropTypes.bool.isRequired
+// };
 
 export default withRouter(BackButton);

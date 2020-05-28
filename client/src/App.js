@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+// import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./actions/utils/setAuthToken";
-import { setCurrentUser, logoutUser } from "./actions/authAct";
+import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/layout/PrivateRoute";
 import store from "./store";
@@ -13,23 +14,23 @@ import { Provider } from "react-redux";
 import "./styles/App.css";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import BottomNav from "./components/layout/BottomNav";
 
 // ROUTES
 import City from "./views/City";
 import Home from "./views/Home";
 import Cities from "./views/Cities";
 import Login from "./views/Login";
-import Signup from "./views/CreateAccount";
-import Cmsitin from "./views/ApricotJourney";
-import Cmsactivity from "./views/ApricotActivity";
-import Cmscity from "./views/ApricotCity";
+import Signup from "./views/Signup";
+import Cmsitin from "./views/Cmsitin";
+import Cmsactivity from "./views/Cmsactivity";
+import Cmscity from "./views/Cmscity";
 import EditActivity from "./components/EditActivity";
-import EditItinerary from "./components/EditJourney";
-import Editcity from "./components/EditCity";
+import EditItinerary from "./components/EditItinerary";
+import Editcity from "./components/Editcity";
 import Dashboard from "./views/Dashboard";
 import Hashtag from "./views/Hashtag";
-import Cms from "./views/Apricot";
+import Cms from "./views/Cms";
 
 // JWT TOKEN
 if (sessionStorage.jwtToken) {
@@ -101,7 +102,7 @@ class App extends Component {
                 />
               </Switch>
             </div>
-            <Footer />
+            <BottomNav />
           </div>
         </BrowserRouter>
       </Provider>

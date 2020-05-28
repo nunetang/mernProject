@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { fetchCities } from "../actions/citiesAct";
+import { fetchCities } from "../actions/citiesActions";
 import { getCurrentProfile } from "./../actions/profileActions";
 import { debounce } from "lodash";
 import Header from "../components/layout/Header";
-
+// import Card from "@material-ui/core/Card";
+// import CardContent from "@material-ui/core/CardContent";
+// import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
-import ComplexCityButton from "./../components/layout/BuildingCityButton";
+import ComplexCityButton from "./../components/layout/ComplexCityButton";
 
 class Cities extends Component {
   constructor(props) {

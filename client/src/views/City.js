@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { getCurrentProfile } from "./../actions/profileActions";
 import { connect } from "react-redux";
-import { fetchCities } from "../actions/citiesAct";
-import { fetchItinerariesByCity } from "../actions/journeyAct";
+import { fetchCities } from "../actions/citiesActions";
+import { fetchItinerariesByCity } from "../actions/itinerariesActions";
 
-import Itinerary from "../components/Journey";
+import Itinerary from "../components/Itinerary";
 import Header from "../components/layout/Header";
 
 class City extends Component {

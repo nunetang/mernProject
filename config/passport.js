@@ -5,8 +5,12 @@ const JwtStrategy = require("passport-jwt").Strategy;
 const ExtractJwt = require("passport-jwt").ExtractJwt;
 
 const User = mongoose.model("users");
+// const passport = require("passport");
 
+// const FacebookTokenStrategy = require("passport-facebook-token");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+
+// --------------------------------------
 
 const options = {};
 options.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
@@ -16,7 +20,7 @@ module.exports = passport => {
   // JWT
   passport.use(
     new JwtStrategy(options, (jwt_payload, done) => {
-      
+      // console.log("jwt payload", jwt_payload);
       User.findById(jwt_payload.id)
         .then(User => {
           if (User) {

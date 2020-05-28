@@ -1,31 +1,15 @@
-# mernProject
+# Apricot
 
-# Create React Express App
+Fullstack application using React.JS (Redux), Node.JS, Express.JS, MongoDB (Mongoose), Multer, Passport, Google Authentication.
 
-## About This Boilerplate
+Welcome to the "Apricot/Hidden Gem App. A travel app built using the MERN stack with Material UI.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+You will need to create a .env file in your root folder with the following info :
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+MONGO_URI = "YOUR_OWN_MONGO_URI"
+SECRET_OR_KEY = "YOUR_OWN_SECRET"
+googleClientID = "YOUR_GOOGLECLIENTID_SECRET"
+googleClientSecret = "YOUR_GOOGLECLIENT_SECRET"
 
-## Starting the app locally
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
 
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.

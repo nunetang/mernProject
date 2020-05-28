@@ -7,7 +7,7 @@ import { fetchItinerariesID } from "../actions/profileActions";
 
 import IconCity from "../components/layout/IconCity";
 import Header from "../components/layout/Header";
-import ItinCard from "../components/layout/JourneyCard";
+import ItinCard from "../components/layout/ItinCard";
 
 import Card from "@material-ui/core/Card";
 

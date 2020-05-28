@@ -7,10 +7,10 @@ import {
   loginUser,
   registerUser,
   socialRegisterUser
-} from "../actions/authAct";
+} from "../actions/authActions";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
-import { googleClientID } from "./../keySecret.js";
+import { googleClientID } from "./../keys.js";
 
 import {
   FacebookLoginButton,
@@ -18,7 +18,7 @@ import {
 } from "react-social-login-buttons";
 import Header from "./../components/layout/Header";
 
-import SpecialButton from "../components/layout/SpecialButton";
+import CustomButton from "../components/layout/CustomButton";
 
 import TextField from "@material-ui/core/TextField";
 import Card from "@material-ui/core/Card";
@@ -37,7 +37,8 @@ class Login extends Component {
       isAuthenticated: false,
       user: null,
       token: ""
-
+      // loginError: false,
+      // redirect: false
     };
   }
 
@@ -178,7 +179,7 @@ class Login extends Component {
 
               {/* SUBMIT BUTTON */}
               <div>
-                <SpecialButton
+                <CustomButton
                   bgcolor={"#039be5"}
                   disabled={false}
                   title={"Submit"}
@@ -237,8 +238,8 @@ class Login extends Component {
     const noAccountMessage = (
       <div>
         <p className="createAccountText">
-          Dont have an Apricot account?{" "}
-          <Link to="/CreateAccount">
+          Dont have a MYtinerary account?{" "}
+          <Link to="/Signup">
             <span className="createAccountLink">Create an account!</span>
           </Link>{" "}
           Its totally free and only takes a minute.

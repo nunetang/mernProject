@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { logoutUser } from "../actions/authAct";
+import { logoutUser } from "../actions/authActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getCurrentProfile } from "../actions/profileActions";
 
 import { Spring } from "react-spring/renderprops";
 
-import ComplexHomeButton from "../components/layout/BuildingHomeButton";
-import CustomButton from "./../components/layout/SpecialButton";
+import ComplexHomeButton from "../components/layout/ComplexHomeButton";
+import CustomButton from "./../components/layout/CustomButton";
 
 class Home extends Component {
   componentDidMount() {
@@ -109,12 +109,13 @@ class Home extends Component {
             <img
               className="homeBrand"
               alt="logo_image"
-              src={require("../images/client/apricotLogo.png")}
+              src={require("../images/client/MYtineraryLogo.png")}
             />
           </div>
 
           <div className="paragraphText">
-            Find your perfect gem/Apricot:)
+            Find your perfect trip, designed by insiders who know and love their
+            cities.
           </div>
 
           <div className="paragraphText">

@@ -1,11 +1,18 @@
 const express = require("express");
 const router = express.Router();
+// const mongoose = require("mongoose");
 const passport = require("passport");
 
 //  Load User model
 const User = require("../../models/usermodel");
-const Itinmodel = require("../../models/journeyModel");
-c
+const Itinmodel = require("../../models/itinerarymodel");
+
+// GET USER INFO
+//-------------------------------------------------------------
+
+// @route   GET auth/profile/:user_id
+// @desc    Get profile by user ID
+// @access  Public
 
 router.get(
   "/profileget",
@@ -16,13 +23,21 @@ router.get(
       .then(user => {
         res.json(user);
       })
-
+      // .then(user => {
+      //   res.json(user.favorites);
+      // })
       .catch(() =>
         res.status(404).json({ User: "There is no user info for this user" })
       );
   }
 );
 
+//-------------------------------------------------------------
+// FAVORITE ADD
+
+// @route   POST auth/profile/postfav/:id
+// @desc    Add to Favorites in User Profile
+// @access  Private
 
 router.post(
   "/profile/postfav/:id",
@@ -38,6 +53,12 @@ router.post(
   }
 );
 
+//-------------------------------------------------------------
+// FAVORITE DELETE
+
+// @route   DELETE auth/profile/removefav/:id/:favid
+// @desc    Delete Favorite from User
+// @access  Private
 
 router.delete(
   "/profile/removefav/:id/:favid",

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authAct";
-import MenuBar from "./MenuBar";
+import { logoutUser } from "../../actions/authActions";
+import MenuAppBar from "./MenuAppBar";
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -12,7 +12,7 @@ class Navbar extends Component {
   render() {
     return (
       <React.Fragment>
-        <MenuBar />
+        <MenuAppBar />
       </React.Fragment>
     );
   }

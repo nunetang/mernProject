@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 import { connect } from "react-redux";
 import { debounce } from "lodash";
-import { fetchActivities } from "../actions/activitiesAct";
-import { fetchItineraries } from "../actions/journeyAct";
-import { editActivity, deleteActivity } from "../actions/apricotAct";
+import { fetchActivities } from "../actions/activitiesActions";
+import { fetchItineraries } from "../actions/itinerariesActions";
+import { editActivity, deleteActivity } from "../actions/cmsActions";
 
 import Header from "../components/layout/Header";
 import Button from "@material-ui/core/Button";

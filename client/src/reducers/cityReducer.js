@@ -1,4 +1,4 @@
-import { FETCH_CITIES } from "../actions/Categories";
+import { FETCH_CITIES } from "../actions/Types";
 
 const initialState = {
   cities: []

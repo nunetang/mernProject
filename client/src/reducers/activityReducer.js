@@ -1,4 +1,4 @@
-import { FETCH_ACTIVITIES } from "../actions/Categories";
+import { FETCH_ACTIVITIES } from "../actions/Types";
 
 const initialState = {
   activities: []
@@ -15,4 +15,4 @@ export default function(state = initialState, action) {
     default:
       return state;
   }
-};
+}
