@@ -13,10 +13,3 @@ You will need to create a .env file in your root folder with the following info 
 * googleClientID = "YOUR_GOOGLECLIENTID_SECRET"
 
 * googleClientSecret = "YOUR_GOOGLECLIENT_SECRET"
-
-## Demo:
-
-<img src = "uploads/demo.PNG">
-
-
-
